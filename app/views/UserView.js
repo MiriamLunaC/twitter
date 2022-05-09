@@ -12,6 +12,8 @@ class UserView{
                 typeof(payload.name) != "string" || 
                 typeof(payload.id) != "number"){
                 result.error = "necesitan tener un valor válido"
+            }else{
+                result = UserService.create(payload.id, payload.username, payload.name)
             }
             
         }
