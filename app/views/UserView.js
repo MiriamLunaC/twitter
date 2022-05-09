@@ -6,7 +6,11 @@ class UserView{
         if(payload == null){
             result.error = "payload no existe"
         }else{
-            if(typeof(payload.username) != "string" || typeof(payload.name) != "string" || typeof(payload.id) != "number"){
+            if( payload.username == undefined || payload.name == undefined ||
+                payload.id == undefined ||
+                typeof(payload.username) != "string" || 
+                typeof(payload.name) != "string" || 
+                typeof(payload.id) != "number"){
                 result.error = "necesitan tener un valor válido"
             }
             
