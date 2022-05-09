@@ -13,6 +13,13 @@ class UserService {
         return user.username = newUser
     }
 
+    static getAllUsernames(users){
+        const usernames = [];
+        users.forEach((user)=>{
+            usernames.push(user.username)
+        })
+        return usernames;
+    }
 }
 
 module.exports = UserService
